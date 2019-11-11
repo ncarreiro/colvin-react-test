@@ -7,9 +7,10 @@ const AppContainer = styled.div`
 const MainContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 `;
 
-export const StyledApp = {
+export const AppStyles = {
   AppContainer,
   MainContainer
 };
