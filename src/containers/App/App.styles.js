@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
 const AppContainer = styled.div`
+  background: #333;
+  color: #fff;
   font-family: Arial;
 `;
 
-const MainContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+const AppTitle = styled.div`
+  margin: 20px 0;
+  font-size: 2em;
 `;
 
 export const AppStyles = {
   AppContainer,
-  MainContainer
+  AppTitle
 };

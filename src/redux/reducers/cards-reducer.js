@@ -1,5 +1,7 @@
+import mockedCards from "../../mocks/mockedCards";
+
 export const initialState = {
-  cards: []
+  items: mockedCards
 };
 
 function cardsReducer(state = initialState, action) {
