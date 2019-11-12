@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import { CardsStyles } from "./Cards.styles";
 
-import CardForm from "../../components/CardForm/CardForm";
+import CardForm from "../CardForm/CardForm";
 import Card from "../../components/Card/Card";
 
 class Cards extends Component {
@@ -17,8 +17,7 @@ class Cards extends Component {
             editing === card.id ? (
               <CardForm
                 key={card.id}
-                form={`cardForm-${card.id}`}
-                editCompleted={this.finishedEditCardForm}
+                form={`editCardForm-${card.id}`}
                 initialValues={{ ...card }}
               />
             ) : (
@@ -32,7 +31,7 @@ class Cards extends Component {
 
 Cards.propTypes = {
   cards: PropTypes.array,
-  editing: PropTypes.string
+  editing: PropTypes.number
 };
 
 const mapStateToProps = state => {

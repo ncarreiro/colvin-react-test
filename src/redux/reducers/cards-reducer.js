@@ -6,12 +6,16 @@ export const initialState = {
   editing: null
 };
 
+const getLastCardID = state => state.items.slice(-1).pop().id;
+
 function cardsReducer(state = initialState, action) {
   switch (action.type) {
     case "ADD_CARD":
       return {
         ...state,
-        items: update(state.items, { $push: [action.card] })
+        items: update(state.items, {
+          $push: [{ ...action.card, id: getLastCardID(state) + 1 }]
+        })
       };
     case "EDIT_CARD":
       return {
