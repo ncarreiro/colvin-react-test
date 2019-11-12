@@ -1,44 +1,26 @@
 [
   {
     "id": "1",
-    "title": "Hola Yngwie1!",
-    "image": "images/meperdonas.png",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ut nisi vitae cursus. Vestibulum condimentum libero a pretium pulvinar. Nulla id pharetra lectus."
-  },
-  {
-    "id": "2",
-    "title": "Hola Roman!",
+    "title": "Roman",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ut nisi vitae cursus. Vestibulum condimentum libero a pretium pulvinar. Nulla id pharetra lectus.",
     "image": "https://1.bp.blogspot.com/-VLw6yIOmKzU/XD75QvTLAWI/AAAAAAAAU4s/k1lyIvcy1NMADb4hfmz5x80D-yGDGPJUQCLcBGAs/s1600/maxresdefault.jpg"
   },
   {
-    "id": "3",
-    "title": "Hola Jowie!",
-    "image": "https://placebeard.it/300/200",
+    "id": "2",
+    "title": "Jowie",
+    "image": "images/meperdonas.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ut nisi vitae cursus. Vestibulum condimentum libero a pretium pulvinar. Nulla id pharetra lectus."
   },
   {
-    "id": "4",
-    "title": "Hola Krisu!",
+    "id": "3",
+    "title": "Krisu",
     "image": "https://www.eluniversal.com.mx/sites/default/files/styles/f03-651x400/public/2017/11/09/2.jpeg?itok=MGMLGz3o",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ut nisi vitae cursus. Vestibulum condimentum libero a pretium pulvinar. Nulla id pharetra lectus."
   },
   {
-    "id": "5",
-    "title": "Hola girsake!",
+    "id": "4",
+    "title": "girsake",
     "image": "https://cdn.discordapp.com/attachments/490763791852765185/643506383597207554/unknown.png",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ut nisi vitae cursus. Vestibulum condimentum libero a pretium pulvinar. Nulla id pharetra lectus."
-  },
-  {
-    "id": "6",
-    "title": "Hola AlmiranteFer!",
-    "image": "https://placebeard.it/300/200",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ut nisi vitae cursus. Vestibulum condimentum libero a pretium pulvinar. Nulla id pharetra lectus."
-  },
-  {
-    "id": "7",
-    "title": "Hola hackerk6zhix!",
-    "image": "https://placebeard.it/300/200",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ut nisi vitae cursus. Vestibulum condimentum libero a pretium pulvinar. Nulla id pharetra lectus."
   }
 ]

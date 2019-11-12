@@ -1,8 +1,21 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { CardStyles } from "./Card.styles";
 
-export default class Card extends Component {
+import { CardStyles } from "./Card.styles";
+import { editCard } from "../../redux/actions/cards-actions";
+
+class Card extends Component {
+  constructor() {
+    super();
+    this.handleEdit = this.handleEdit.bind(this);
+  }
+
+  handleEdit() {
+    const { dispatch, id } = this.props;
+    dispatch(editCard(id));
+  }
+
   render() {
     const { title, image, description } = this.props;
     return (
@@ -12,6 +25,7 @@ export default class Card extends Component {
         <CardStyles.Description data-testid="card-description">
           {description}
         </CardStyles.Description>
+        <button onClick={this.handleEdit}>EDIT</button>
       </CardStyles.Container>
     );
   }
@@ -22,3 +36,5 @@ Card.propTypes = {
   image: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
 };
+
+export default connect()(Card);
