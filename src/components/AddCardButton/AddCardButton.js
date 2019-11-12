@@ -9,10 +9,10 @@ class AddCardButton extends Component {
 
   constructor() {
     super();
-    this.handleOnClick = this.handleOnClick.bind(this);
+    this.handleFormClose = this.handleFormClose.bind(this);
   }
 
-  handleOnClick() {
+  handleFormClose() {
     this.setState({ showAddCardForm: !this.state.showAddCardForm });
   }
 
@@ -21,10 +21,10 @@ class AddCardButton extends Component {
       <AddCardButtonStyles.Container data-testid="add-card-button-container">
         {this.state.showAddCardForm && (
           <AddCardButtonStyles.AddCardFormContainer>
-            <CardForm form="addCardForm" handleClose={this.handleOnClick} />
+            <CardForm form="addCardForm" handleClose={this.handleFormClose} />
           </AddCardButtonStyles.AddCardFormContainer>
         )}
-        <AddCardButtonStyles.Button onClick={this.handleOnClick}>
+        <AddCardButtonStyles.Button onClick={this.handleFormClose}>
           +
         </AddCardButtonStyles.Button>
       </AddCardButtonStyles.Container>

@@ -2,12 +2,30 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
+import { updateCard, editCard } from "../../redux/actions/cards-actions";
+
 import { CardsStyles } from "./Cards.styles";
 
 import CardForm from "../CardForm/CardForm";
 import Card from "../../components/Card/Card";
 
 class Cards extends Component {
+  constructor() {
+    super();
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+  }
+
+  handleSubmit(values) {
+    const { dispatch } = this.props;
+    dispatch(updateCard(values));
+  }
+
+  handleClose() {
+    const { dispatch } = this.props;
+    dispatch(editCard(null));
+  }
+
   render() {
     const { cards, editing } = this.props;
     return (
@@ -19,6 +37,8 @@ class Cards extends Component {
                 key={card.id}
                 form={`editCardForm-${card.id}`}
                 initialValues={{ ...card }}
+                onSubmit={this.handleSubmit}
+                handleClose={this.handleClose}
               />
             ) : (
               <Card key={card.id} {...card} />
@@ -30,6 +50,7 @@ class Cards extends Component {
 }
 
 Cards.propTypes = {
+  dispatch: PropTypes.func,
   cards: PropTypes.array,
   editing: PropTypes.number
 };

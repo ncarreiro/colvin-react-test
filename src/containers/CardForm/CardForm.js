@@ -4,28 +4,13 @@ import { Form, Field, reduxForm } from "redux-form";
 import PropTypes from "prop-types";
 
 import { CardFormStyles } from "./CardForm.styles";
-import { updateCard, addCard } from "../../redux/actions/cards-actions";
 
 class CardForm extends Component {
-  constructor() {
-    super();
-    this.onSubmit = this.onSubmit.bind(this);
-  }
-
-  onSubmit(values) {
-    const { dispatch } = this.props;
-    if (values.id) {
-      dispatch(updateCard(values));
-    } else {
-      dispatch(addCard(values));
-    }
-  }
-
   render() {
     const { pristine, handleSubmit, handleClose } = this.props;
     return (
       <CardFormStyles.Container data-testid="card-form-container">
-        <Form onSubmit={handleSubmit(this.onSubmit)}>
+        <Form onSubmit={handleSubmit}>
           <div style={{ display: "none" }}>
             <label htmlFor="id">ID</label>
             <Field name="id" component="input" type="number" disabled />
@@ -54,7 +39,8 @@ class CardForm extends Component {
 
 CardForm.propTypes = {
   pristine: PropTypes.bool,
-  handleSubmit: PropTypes.func
+  handleSubmit: PropTypes.func,
+  handleClose: PropTypes.func
 };
 
 export default connect()(reduxForm()(CardForm));
