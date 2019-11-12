@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
+const Wrapper = styled.div`
+  margin: 10px;
+`;
+
 const Container = styled.div`
   background: #eee;
   color: #333;
-  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  margin: 10px;
   padding: 10px;
   width: 300px;
   height: 450px;
@@ -32,11 +34,14 @@ const Image = styled.img`
 
 const Description = styled.div`
   overflow: hidden;
+  overflow-wrap: break-word;
   flex: 1;
   margin: 10px 0;
+  line-height: 1.5em;
 `;
 
 export const CardStyles = {
+  Wrapper,
   Container,
   Title,
   Image,

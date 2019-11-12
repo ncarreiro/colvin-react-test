@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import { Provider } from "react-redux";
 import store from "../../redux/store";
 
@@ -11,6 +12,12 @@ class App extends Component {
     return (
       <Provider store={store}>
         <AppStyles.AppContainer>
+          <Helmet>
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            />
+          </Helmet>
           <AddCardButton />
           <Cards />
         </AppStyles.AppContainer>

@@ -1,18 +1,27 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
-import { AddCardButtonStyles } from "./AddCardButton.styles";
+import { addCard } from "../../redux/actions/cards-actions";
 import CardForm from "../../containers/CardForm/CardForm";
+
+import { Fab } from "@material-ui/core";
+import AddIcon from "@material-ui/icons/Add";
+import { AddCardButtonStyles } from "./AddCardButton.styles";
 
 class AddCardButton extends Component {
   state = { showAddCardForm: false };
 
   constructor() {
     super();
-    this.handleFormClose = this.handleFormClose.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
-  handleFormClose() {
+  handleSubmit(values) {
+    const { dispatch } = this.props;
+    dispatch(addCard(values));
+  }
+
+  handleClose() {
     this.setState({ showAddCardForm: !this.state.showAddCardForm });
   }
 
@@ -21,12 +30,16 @@ class AddCardButton extends Component {
       <AddCardButtonStyles.Container data-testid="add-card-button-container">
         {this.state.showAddCardForm && (
           <AddCardButtonStyles.AddCardFormContainer>
-            <CardForm form="addCardForm" handleClose={this.handleFormClose} />
+            <CardForm
+              form="addCardForm"
+              onSubmit={this.handleSubmit}
+              handleClose={this.handleClose}
+            />
           </AddCardButtonStyles.AddCardFormContainer>
         )}
-        <AddCardButtonStyles.Button onClick={this.handleFormClose}>
-          +
-        </AddCardButtonStyles.Button>
+        <Fab color="primary" aria-label="add" onClick={this.handleClose}>
+          <AddIcon />
+        </Fab>
       </AddCardButtonStyles.Container>
     );
   }

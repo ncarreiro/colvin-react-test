@@ -34,6 +34,13 @@ function cardsReducer(state = initialState, action) {
         }),
         editing: null
       };
+    case "DELETE_CARD":
+      console.log(action.cardId);
+      return {
+        ...state,
+        items: state.items.filter(item => item.id !== action.cardId),
+        editing: null
+      };
     default:
       return state;
   }
