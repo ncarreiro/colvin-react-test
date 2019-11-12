@@ -4,12 +4,10 @@ import { CardStyles } from "./Card.styles";
 
 export default class Card extends Component {
   render() {
-    const { header, image, description } = this.props;
+    const { title, image, description } = this.props;
     return (
       <CardStyles.Container data-testid="card-container">
-        <CardStyles.Header data-testid="card-header">
-          {header}
-        </CardStyles.Header>
+        <CardStyles.Title data-testid="card-title">{title}</CardStyles.Title>
         <CardStyles.Image data-testid="card-image" src={image} />
         <CardStyles.Description data-testid="card-description">
           {description}
@@ -20,7 +18,7 @@ export default class Card extends Component {
 }
 
 Card.propTypes = {
-  header: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
 };

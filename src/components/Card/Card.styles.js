@@ -16,7 +16,7 @@ const Container = styled.div`
   box-shadow: 0 3px 10px #000;
 `;
 
-const Header = styled.div`
+const Title = styled.div`
   display: flex;
   align-items: center;
   height: 40px;
@@ -38,7 +38,7 @@ const Description = styled.div`
 
 export const CardStyles = {
   Container,
-  Header,
+  Title,
   Image,
   Description
 };

@@ -4,15 +4,19 @@ import store from "../../redux/store";
 
 import { AppStyles } from "./App.styles";
 import Cards from "../Cards/Cards";
+import CardForm from "../../components/CardForm/CardForm";
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <Provider store={store}>
         <AppStyles.AppContainer>
+          <CardForm />
           <Cards />
         </AppStyles.AppContainer>
       </Provider>
     );
   }
 }
+
+export default App;
