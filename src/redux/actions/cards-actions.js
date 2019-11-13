@@ -1,9 +1,9 @@
 import CardModel from "../models/card-model";
 
-const ADD_CARD = "ADD_CARD";
-const DELETE_CARD = "DELETE_CARD";
-const EDIT_CARD = "EDIT_CARD";
-const UPDATE_CARD = "UPDATE_CARD";
+export const ADD_CARD = "ADD_CARD";
+export const DELETE_CARD = "DELETE_CARD";
+export const EDIT_CARD = "EDIT_CARD";
+export const UPDATE_CARD = "UPDATE_CARD";
 
 export function addCard(card) {
   return {

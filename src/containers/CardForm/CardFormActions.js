@@ -30,7 +30,10 @@ class CardFormActions extends Component {
     const { pristine, handleDelete, handleClose } = this.props;
     return (
       <ThemeProvider theme={theme}>
-        <CardFormStyles.ButtonContainer fullWidth>
+        <CardFormStyles.ButtonContainer
+          data-testid="card-form-actions-container"
+          fullWidth
+        >
           <Button
             color="primary"
             variant="contained"

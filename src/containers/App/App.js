@@ -26,17 +26,17 @@ class App extends Component {
     return (
       <Provider store={store}>
         <ThemeProvider theme={theme}>
-          <AppStyles.AppWrapper>
+          <AppStyles.AppWrapper data-testid="app-wrapper">
             <Helmet>
               <link
                 rel="stylesheet"
                 href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap"
               />
             </Helmet>
-            <AppStyles.AppHeader>
+            <AppStyles.AppHeader data-testid="app-header">
               Colvin Card Game by Nahuel Carreiro
             </AppStyles.AppHeader>
-            <AppStyles.AppContainer>
+            <AppStyles.AppContainer data-testid="app-container">
               <CardsActions />
               <Cards />
             </AppStyles.AppContainer>
