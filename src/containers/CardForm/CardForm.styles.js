@@ -17,9 +17,7 @@ const Container = styled(Form)`
   box-shadow: 0 3px 10px #000;
 `;
 
-const ButtonContainer = styled(ButtonGroup)`
-  width: 100%;
-`;
+const ButtonContainer = styled(ButtonGroup)``;
 
 export const CardFormStyles = {
   Container,
