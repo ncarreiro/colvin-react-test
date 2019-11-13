@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
-const Container = styled.div`
-  z-index: 9;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-`;
+const Container = styled.div``;
 
 const AddCardFormContainer = styled.div`
   z-index: 9;

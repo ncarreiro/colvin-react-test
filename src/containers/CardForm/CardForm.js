@@ -27,10 +27,15 @@ class CardForm extends Component {
         data-testid="card-form-container"
         onSubmit={handleSubmit}
       >
-        <div style={{ display: "none" }}>
-          <Field name="id" component="input" type="number" disabled />
-        </div>
         <Field
+          name="id"
+          component="input"
+          type="number"
+          disabled
+          style={{ display: "none" }}
+        />
+        <Field
+          autoFocus
           required
           label="Title"
           margin="normal"
@@ -58,7 +63,7 @@ class CardForm extends Component {
           margin="normal"
           name="description"
           type="text"
-          helperText="Add a description for your new card."
+          helperText="Add a description (less than 160 characters)."
           component={FormField}
           validate={[required, maxDescriptionLength]}
           style={{ flex: 1 }}

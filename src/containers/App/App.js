@@ -6,13 +6,17 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 import { AppStyles } from "./App.styles";
 import Cards from "../Cards/Cards";
-import AddCardButton from "../../components/AddCardButton/AddCardButton";
+import CardsActions from "../../components/CardsActions/CardsActions";
 
 const theme = createMuiTheme({
   palette: {
     primary: {
       main: "#41d5ab",
       contrastText: "#fff"
+    },
+    secondary: {
+      main: "#fff",
+      contrastText: "#023838"
     }
   }
 });
@@ -33,7 +37,7 @@ class App extends Component {
               Colvin Card Game by Nahuel Carreiro
             </AppStyles.AppHeader>
             <AppStyles.AppContainer>
-              <AddCardButton />
+              <CardsActions />
               <Cards />
             </AppStyles.AppContainer>
           </AppStyles.AppWrapper>

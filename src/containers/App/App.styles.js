@@ -14,7 +14,12 @@ const AppHeader = styled.div`
   height: ${headerHeight};
   font-size: 28px;
   font-weight: 700;
-  color: #fff;
+  color: #023838;
+  background: #fff;
+
+  @media print {
+    display: none;
+  }
 `;
 
 const AppContainer = styled.div`

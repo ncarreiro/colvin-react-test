@@ -1,7 +1,12 @@
 import styled from "styled-components";
+import { Button } from "@material-ui/core";
 
 const Wrapper = styled.div`
   margin: 10px;
+
+  @media print {
+    margin: 5px;
+  }
 `;
 
 const Container = styled.div`
@@ -16,6 +21,10 @@ const Container = styled.div`
   border-radius: 10px;
   box-sizing: border-box;
   box-shadow: 0 3px 10px #000;
+
+  @media print {
+    box-shadow: none;
+  }
 `;
 
 const Title = styled.div`
@@ -41,10 +50,18 @@ const Description = styled.div`
   line-height: 1.3em;
 `;
 
+const EditButton = styled(Button)`
+  @media print {
+    display: none;
+    opacity: 0;
+  }
+`;
+
 export const CardStyles = {
   Wrapper,
   Container,
   Title,
   Image,
-  Description
+  Description,
+  EditButton
 };

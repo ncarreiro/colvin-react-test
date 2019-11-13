@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addCard } from "../../redux/actions/cards-actions";
-import CardForm from "../../containers/CardForm/CardForm";
+import { addCard } from "../../../redux/actions/cards-actions";
+import CardForm from "../../../containers/CardForm/CardForm";
 
 import { Fab } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
@@ -34,7 +34,14 @@ class AddCardButton extends Component {
             />
           </AddCardButtonStyles.AddCardFormContainer>
         )}
-        <Fab color="primary" aria-label="add" onClick={this.handleClose}>
+        <Fab
+          color="primary"
+          aria-label="add"
+          style={{
+            marginLeft: "10px"
+          }}
+          onClick={this.handleClose}
+        >
           <AddIcon />
         </Fab>
       </AddCardButtonStyles.Container>
