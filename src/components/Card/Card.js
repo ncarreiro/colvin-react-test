@@ -1,19 +1,12 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import EditIcon from "@material-ui/icons/Edit";
 
 import { CardStyles } from "./Card.styles";
-import { editCard } from "../../redux/actions/cards-actions";
 
 class Card extends Component {
-  handleEdit = () => {
-    const { dispatch, id } = this.props;
-    dispatch(editCard(id));
-  };
-
   render() {
-    const { title, image, description } = this.props;
+    const { handleEdit, title, image, description } = this.props;
     return (
       <CardStyles.Wrapper data-testid="card-wrapper">
         <CardStyles.Container data-testid="card-container">
@@ -25,9 +18,10 @@ class Card extends Component {
           <CardStyles.EditButton
             variant="contained"
             color="primary"
-            startIcon={<EditIcon />}
-            onClick={this.handleEdit}
-          />
+            onClick={handleEdit}
+          >
+            <EditIcon />
+          </CardStyles.EditButton>
         </CardStyles.Container>
       </CardStyles.Wrapper>
     );
@@ -35,9 +29,10 @@ class Card extends Component {
 }
 
 Card.propTypes = {
-  title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  handleEdit: PropTypes.func,
+  title: PropTypes.string,
+  image: PropTypes.string,
+  description: PropTypes.string
 };
 
-export default connect()(Card);
+export default Card;

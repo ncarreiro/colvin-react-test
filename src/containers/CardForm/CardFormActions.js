@@ -37,8 +37,9 @@ class CardFormActions extends Component {
             margin="normal"
             type="submit"
             disabled={pristine}
-            startIcon={<SaveIcon />}
-          />
+          >
+            <SaveIcon />
+          </Button>
           {handleDelete && (
             <Button
               color="secondary"
@@ -46,15 +47,13 @@ class CardFormActions extends Component {
               margin="normal"
               onClick={this.handleDelete}
               styled={{ backgroundColor: "#a81515" }}
-              startIcon={<DeleteIcon />}
-            />
+            >
+              <DeleteIcon />
+            </Button>
           )}
-          <Button
-            variant="contained"
-            margin="normal"
-            onClick={handleClose}
-            startIcon={<CancelIcon />}
-          />
+          <Button variant="contained" margin="normal" onClick={handleClose}>
+            <CancelIcon />
+          </Button>
         </CardFormStyles.ButtonContainer>
       </ThemeProvider>
     );

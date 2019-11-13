@@ -29,10 +29,15 @@ class Cards extends Component {
     dispatch(editCard(null));
   };
 
+  handleEdit = id => {
+    const { dispatch } = this.props;
+    dispatch(editCard(id));
+  };
+
   render() {
     const { cards, editing } = this.props;
     return (
-      <CardsStyles.CardContainer>
+      <CardsStyles.CardContainer data-testid="cards-container">
         {cards.length > 0 &&
           cards.map(card =>
             editing === card.id ? (
@@ -46,7 +51,11 @@ class Cards extends Component {
                 handleClose={this.handleClose}
               />
             ) : (
-              <Card key={card.id} {...card} />
+              <Card
+                key={card.id}
+                handleEdit={() => this.handleEdit(card.id)}
+                {...card}
+              />
             )
           )}
       </CardsStyles.CardContainer>
