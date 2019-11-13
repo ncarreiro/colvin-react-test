@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "title": "Test Card 1",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ut nisi vitae cursus. Vestibulum condimentum libero a pretium pulvinar. Nulla id pharetra lectus.",
-    "image": "https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png"
+    "title": "Pink Vanilla",
+    "description": "Apodado Pink Vanilla por el buen rollo que transmite. Está rebosante de felicidad y este ramo de flores frescas es su descripción visual.",
+    "image": "https://cdn.thecolvinco.com/photos_cache_gallery/pink-vanilla/pink-vanilla-700ba6e9-2a32-4b7c-b7ff-0d4b8b12bd56.jpg"
   },
   {
     "id": 2,
-    "title": "Test Card 2",
-    "image": "https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ut nisi vitae cursus. Vestibulum condimentum libero a pretium pulvinar. Nulla id pharetra lectus."
+    "title": "Queen",
+    "image": "https://cdn.thecolvinco.com/photos_cache_gallery/queen/queen-046452bf-24dd-4b81-bf9d-d4f2d641da69.jpg",
+    "description": "Parece una verdura, pero es en realidad una de las flores más singulares de la temporada de otoño e invierno."
   },
   {
     "id": 3,
-    "title": "Test Card 3",
-    "image": "https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ut nisi vitae cursus. Vestibulum condimentum libero a pretium pulvinar. Nulla id pharetra lectus."
+    "title": "New York",
+    "image": "https://cdn.thecolvinco.com/photos_cache_gallery/new-york/new-york-8539ce77-be76-46a9-86d1-f10c8197a8d7.jpg",
+    "description": "Convertimos la ciudad que nunca duerme en un ramo de flores de otoño que se vuelve irresistiblemente deseable para cualquiera que lo vea."
   },
   {
     "id": 4,
-    "title": "Test Card 4",
-    "image": "https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ut nisi vitae cursus. Vestibulum condimentum libero a pretium pulvinar. Nulla id pharetra lectus."
+    "title": "Chilli Pepper",
+    "image": "https://cdn.thecolvinco.com/photos_cache_gallery/chilli-pepper/chilli-pepper-2027ae4e-0da2-4a23-bed7-1b43ad7b1761.jpg",
+    "description": "El Chilli Pepper tiene esos toques burdeos tan otoñales, pero en su versión más subida y colorida. Reivindicamos un otoño de sonrisas y tranquilidad."
   }
 ]

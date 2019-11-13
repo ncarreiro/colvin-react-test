@@ -8,15 +8,10 @@ import { CardStyles } from "./Card.styles";
 import { editCard } from "../../redux/actions/cards-actions";
 
 class Card extends Component {
-  constructor() {
-    super();
-    this.handleEdit = this.handleEdit.bind(this);
-  }
-
-  handleEdit() {
+  handleEdit = () => {
     const { dispatch, id } = this.props;
     dispatch(editCard(id));
-  }
+  };
 
   render() {
     const { title, image, description } = this.props;

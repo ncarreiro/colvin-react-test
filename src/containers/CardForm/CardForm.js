@@ -3,19 +3,17 @@ import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 import PropTypes from "prop-types";
 
-import { CardFormStyles } from "./CardForm.styles";
-
 import FormField from "../../components/FormField/FormField";
 import CardFormActions from "./CardFormActions";
+import { CardFormStyles } from "./CardForm.styles";
 
-const required = value => (value ? undefined : "Required");
+import {
+  required,
+  maxDescriptionLength,
+  isValidUrl
+} from "./CardFormValidations";
 
 class CardForm extends Component {
-  handleDelete = () => {
-    const { handleDelete, cardId } = this.props;
-    handleDelete(cardId);
-  };
-
   render() {
     const {
       pristine,
@@ -38,6 +36,7 @@ class CardForm extends Component {
           margin="normal"
           name="title"
           type="text"
+          helperText="Write your Card title."
           component={FormField}
           validate={[required]}
         />
@@ -47,19 +46,21 @@ class CardForm extends Component {
           margin="normal"
           name="image"
           type="text"
+          helperText="Enter a valid image URL."
           component={FormField}
-          validate={[required]}
+          validate={[required, isValidUrl]}
         />
         <Field
           required
           multiline
-          rows="6"
+          rows="5"
           label="Description"
           margin="normal"
           name="description"
           type="text"
+          helperText="Add a description for your new card."
           component={FormField}
-          validate={[required]}
+          validate={[required, maxDescriptionLength]}
           style={{ flex: 1 }}
         />
         <CardFormActions
@@ -74,11 +75,11 @@ class CardForm extends Component {
 }
 
 CardForm.propTypes = {
+  cardId: PropTypes.number,
   pristine: PropTypes.bool,
   handleSubmit: PropTypes.func,
   handleDelete: PropTypes.func,
-  handleClose: PropTypes.func,
-  cardId: PropTypes.number
+  handleClose: PropTypes.func
 };
 
 export default connect()(reduxForm()(CardForm));

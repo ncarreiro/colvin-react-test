@@ -8,22 +8,19 @@ import AddIcon from "@material-ui/icons/Add";
 import { AddCardButtonStyles } from "./AddCardButton.styles";
 
 class AddCardButton extends Component {
-  state = { showAddCardForm: false };
-
   constructor() {
     super();
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleClose = this.handleClose.bind(this);
+    this.state = { showAddCardForm: false };
   }
 
-  handleSubmit(values) {
+  handleSubmit = values => {
     const { dispatch } = this.props;
     dispatch(addCard(values));
-  }
+  };
 
-  handleClose() {
+  handleClose = () => {
     this.setState({ showAddCardForm: !this.state.showAddCardForm });
-  }
+  };
 
   render() {
     return (
